@@ -46,7 +46,7 @@ test('updating a product with stock_number different to productId should throw a
     expect(() => productDao.update('111', JSON.parse(productJson))).toThrow(productDao.ProductError);
 })
 
-test('updating a non-existant product should throw an exception', () => {
+test('updating a non-existent product should throw an exception', () => {
     var productJson = '{"stock_number":"555","name":"Pro Batteries","Description":"Batteries","Price":"£1.99"}';
     expect(() => productDao.update('555', JSON.parse(productJson))).toThrow(productDao.ProductError);
 })

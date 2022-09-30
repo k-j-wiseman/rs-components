@@ -28,8 +28,8 @@ function update(productId, product) {
     }
 
     if (!products.has(productId)) {
-        // I am assuming that the existence of a dedicated POST route
-        // that when the product is missing this should be treated as an error
+        // I am assuming that given the existence of a dedicated POST route
+        // when the product is missing this should be treated as an error rather than an insert
         throw notFoundError(productId);
     }
 
